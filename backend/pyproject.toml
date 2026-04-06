@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xapi-learning-dashboard"
+version = "0.1.0"
+description = "Analytics dashboard for xAPI learning data with completion funnels, skill maps, and at-risk detection"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Pranav Shastri" }]
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "pandas>=2.1.0",
+    "httpx>=0.26.0",
+    "python-dotenv>=1.0.0",
+    "aiosqlite>=0.19.0",
+    "python-multipart>=0.0.6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0", "pytest-asyncio>=0.23.0", "pytest-cov>=4.1.0", "ruff>=0.2.0", "httpx"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
