@@ -1,5 +1,7 @@
 # xAPI Learning Analytics Dashboard
 
+[![CI](https://github.com/shastripranav/xapi-learning-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/shastripranav/xapi-learning-dashboard/actions/workflows/ci.yml)
+
 Purpose-built analytics dashboard for xAPI (Experience API) learning data. Connects to any xAPI-conformant LRS or loads data from JSON — gives L&D teams instant visualizations of learner progress, completion funnels, engagement patterns, skill maps, and at-risk identification.
 
 ## Why This Exists
